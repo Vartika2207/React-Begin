@@ -1,37 +1,21 @@
 // import logo from './logo.svg';
 // import './App.css';
-
+import Welcome from "./components/Welcome";
 
 function App() {
-  function formatUser(user) {
-    return (
-        user.firstname + " " + user.lastname
-    )
-  }
-
-  function getGreeting(user) {
-    if(user) {
-        return <h1>Hello {user.firstname}</h1>
-    }
-    else {
-        return <h1>Hello Customer</h1>
-    }
-  }
-
-  const element = <h1>Hello there</h1>
-  const name = {
+  
+  const element = <h1>Hello there from App.js</h1>
+  const userInfo = {
     firstname: 'Vartika',
     lastname: 'Shakya'
   }
   return (
     <div>
-      <h2>{element}</h2>
-      <h3>{formatUser(name)}</h3>
-      {getGreeting(name)}
+     <h1>Hello {element}</h1>
+     <Welcome user = {userInfo}/>
     </div>
   );
 }
 
-App();
 
 export default App;
