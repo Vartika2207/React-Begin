@@ -4,10 +4,9 @@ import React, {useState, useEffect} from 'react'
 function Clock() {
 
     const [time, setTime] = useState(new Date().toString());
-    const [flag, setFlag] = useState(false);
     
     useEffect(() => {
-        console.log("component updated");
+        console.log("component updated or mounted");
         const interval = setInterval(showDate, 1000);
 
         // cleanup when component is unmounted
