@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Clock from "./components/Clock";
 import Welcome from "./components/Welcome";
+import LoginControl from "./components/LoginControl";
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
      {/* <h1>Hello {element}</h1>
      <Welcome user = {userInfo}/> */}
      {flag ? <Clock/> : " Sorry no clock component"}
+
+     <LoginControl/>
     </div>
   );
 }
