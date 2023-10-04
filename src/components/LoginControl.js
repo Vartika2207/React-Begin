@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 // conditional rendering of components
-function LoginControl() {
+function LoginControl(props) {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const handelLoginClick = () => { setIsLoggedIn(true) };
-    const handelLogoutClick = () => { setIsLoggedIn(false) };
+    const handelLoginClick = () => { setIsLoggedIn(true); props.xyz() };
+    const handelLogoutClick = () => { setIsLoggedIn(false); props.xyz() };
 
     let button;
     if(isLoggedIn) {
