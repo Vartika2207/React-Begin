@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 // import './App.css';
+import Clock from "./components/Clock";
 import Welcome from "./components/Welcome";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div>
      <h1>Hello {element}</h1>
      <Welcome user = {userInfo}/>
+     <Clock/>
     </div>
   );
 }
