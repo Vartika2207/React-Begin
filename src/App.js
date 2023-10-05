@@ -5,6 +5,7 @@ import Clock from "./components/Clock";
 import Welcome from "./components/Welcome";
 import LoginControl from "./components/LoginControl";
 import Blog from "./components/Blog";
+import Form from "./components/Form";
 
 function App() {
   const [flag, setFlag] = useState(false);
@@ -58,7 +59,10 @@ function App() {
 
       <LoginControl xyz={loginControlClicked} />
       {loginControl ? <h1>hello</h1> : "bye bye"}
-      {loginControl ? <Blog posts={postsData}/> : " "}
+      {/* {loginControl ? <Blog posts={postsData}/> : " "} */}
+      {/* {loginControl ? <Form/> : " "} */}
+      <Form/>
+
     </div>
   );
 }
