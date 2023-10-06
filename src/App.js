@@ -6,16 +6,13 @@ import Welcome from "./components/Welcome";
 import LoginControl from "./components/LoginControl";
 import Blog from "./components/Blog";
 import Form from "./components/Form";
+import Search from "./components/Search";
+import List from "./components/List";
 
 function App() {
   const [flag, setFlag] = useState(false);
   const [loginControl, setLoginControl] = useState(false);
-
-  const element = <h1>Hello there from App.js</h1>;
-  const userInfo = {
-    firstname: "Vartika",
-    lastname: "Shakya",
-  };
+  const [searchTerm, setSearchTerm] = useState();
 
   const postsData = [
     {
@@ -40,6 +37,20 @@ function App() {
     },
   ];
 
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filterList = postsData.filter((item) => {
+    return (item.title.toLowerCase().includes(searchTerm.toLowerCase()));
+  });
+
+  const element = <h1>Hello there from App.js</h1>;
+  const userInfo = {
+    firstname: "Vartika",
+    lastname: "Shakya",
+  };
+
   const toggle = () => {
     console.log("toggle clicked");
     setFlag((initial) => !initial);
@@ -61,8 +72,10 @@ function App() {
       {loginControl ? <h1>hello</h1> : "bye bye"}
       {/* {loginControl ? <Blog posts={postsData}/> : " "} */}
       {/* {loginControl ? <Form/> : " "} */}
-      <Form/>
+      {/* <Form/> */}
 
+      <Search searchTerm={searchTerm} handleSearch={handleSearch} />
+      <List list={filterList} />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 function NewForm() {
     const initialValue = {
-        name: "A",
+        name: "",
         email: "",
         password: "",
     };
@@ -11,7 +11,7 @@ function NewForm() {
 
   return (
     <div>
-        <form action="submit">
+        <form>
             <label>Email</label>
             <input type="email" value={formData.email} placeholder='Please enter email'/>
 

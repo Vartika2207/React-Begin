@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function Form() {
     const initialValue = {
-        name: "a",
+        name: "",
         email: "",
         password: "",
     };
@@ -18,7 +18,7 @@ function Form() {
     <div>
         <form onSubmit={handleSubmit}>
             <label>Name</label>
-            <input type="text" value={formData.name} placeholder='Please enter name' onChange={event => setFormData({...formData, name: event.target.name})}/>
+            <input type="text" value={formData.name} placeholder='Please enter name' onChange={(event) => setFormData({...formData, name: event.target.name})}/>
 
             <label>Email</label>
             <input type="email" value={formData.email} placeholder='Please enter email' onChange={event => setFormData({...formData, email: event.target.email})}/>
